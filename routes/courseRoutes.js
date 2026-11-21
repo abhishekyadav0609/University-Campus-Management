@@ -1,0 +1,11 @@
+const router = require("express").Router();
+const c = require("../controllers/academicController");
+const auth = require("../middleware/auth");
+const roles = require("../middleware/roles");
+router.use(auth);
+router.get("/", c.listCourses);
+router.get("/enrollment-report", roles("admin"), c.courseEnrollmentReport);
+router.post("/", roles("admin"), c.createCourse);
+router.patch("/:id", roles("admin", "faculty"), c.updateCourse);
+router.delete("/:id", roles("admin"), c.deleteCourse);
+module.exports = router;

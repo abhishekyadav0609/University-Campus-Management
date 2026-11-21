@@ -1,0 +1,10 @@
+const router = require("express").Router();
+const c = require("../controllers/attendanceController");
+const auth = require("../middleware/auth");
+const roles = require("../middleware/roles");
+router.use(auth);
+router.post("/mark", roles("admin", "faculty"), c.markAttendance);
+router.get("/mine", c.myAttendance);
+router.get("/summary/:studentId", c.summary);
+router.get("/low", roles("admin", "faculty"), c.lowAttendance);
+module.exports = router;

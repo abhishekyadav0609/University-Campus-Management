@@ -1,0 +1,10 @@
+const router = require("express").Router();
+router.use("/auth", require("./authRoutes"));
+router.use("/users", require("./userRoutes"));
+router.use("/courses", require("./courseRoutes"));
+router.use("/sections", require("./sectionRoutes"));
+router.use("/enrollments", require("./enrollmentRoutes"));
+router.use("/attendance", require("./attendanceRoutes"));
+router.use("/announcements", require("./announcementRoutes"));
+router.get("/", (req, res) => res.json({ success: true, message: "API v1", modules: ["auth","users","courses","sections","enrollments","attendance","announcements"] }));
+module.exports = router;

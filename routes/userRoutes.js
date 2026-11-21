@@ -1,0 +1,10 @@
+const router = require("express").Router();
+const c = require("../controllers/userController");
+const auth = require("../middleware/auth");
+const roles = require("../middleware/roles");
+router.use(auth);
+router.get("/", roles("admin"), c.listUsers);
+router.post("/", roles("admin"), c.createUser);
+router.patch("/:id", roles("admin"), c.updateUser);
+router.delete("/:id", roles("admin"), c.deleteUser);
+module.exports = router;
