@@ -1,13 +1,13 @@
 # UNIVERSITY CAMPUS MANAGEMENT SYSTEM
 ## Backend Development Capstone Project Report
 
-**Submitted by:** [Your Name]  
-**Course:** [Course Name / BCA]  
-**College/University:** [College Name]  
+**Submitted by:** [abhishek]  
+**Course:** [BCA AI AND DSA]  
+**College/University:** [KR MANGALAM UNIVERSITY]  
 **Subject:** Backend Development  
-**Submitted to:** [Faculty Name]  
+**Submitted to:** [VIVEK SINGH]  
 **Academic Year:** 2026–2027  
-**Submission Date:** [Date]
+**Submission Date:** [21-11-2026]
 
 ---
 
